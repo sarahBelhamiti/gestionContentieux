@@ -2,7 +2,11 @@ package com.inti.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
 
+@Entity
+@DiscriminatorValue("physique") 
 public class Physique extends Tiers implements Serializable {
 
 	private static final long serialVersionUID = -8567158932786928504L;
@@ -14,8 +18,8 @@ public class Physique extends Tiers implements Serializable {
 	public Physique() {
 		super();
 	}
-	public Physique(String cin, String nomPhysique, String prenomPhysique) {
-		super();
+	public Physique(String adresseTiers,String telTiers,Utilisateur utilisateur,String cin,String nomPhysique,String prenomPhysique) {
+		super(adresseTiers, telTiers, utilisateur);
 		this.cin = cin;
 		this.nomPhysique = nomPhysique;
 		this.prenomPhysique = prenomPhysique;

@@ -21,9 +21,9 @@ public class Tribunal implements Serializable {
 	@Id
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
 	private Long idTribunal; 
-	private String adresse; 
+	private String adresseTribunal; 
 	private double fax; 
-	private double tel; 
+	private double telTribunal; 
 	private String region; 
 	@OneToMany (mappedBy="tribunal", fetch=FetchType.EAGER, cascade=CascadeType.REMOVE)
 	private Set<Tache> taches= new HashSet<>();
@@ -37,11 +37,12 @@ public class Tribunal implements Serializable {
 	public void setIdTribunal(Long idTribunal) {
 		this.idTribunal = idTribunal;
 	}
-	public String getAdresse() {
-		return adresse;
+	
+	public String getAdresseTribunal() {
+		return adresseTribunal;
 	}
-	public void setAdresse(String adresse) {
-		this.adresse = adresse;
+	public void setAdresseTribunal(String adresseTribunal) {
+		this.adresseTribunal = adresseTribunal;
 	}
 	public double getFax() {
 		return fax;
@@ -49,11 +50,12 @@ public class Tribunal implements Serializable {
 	public void setFax(double fax) {
 		this.fax = fax;
 	}
-	public double getTel() {
-		return tel;
+	
+	public double getTelTribunal() {
+		return telTribunal;
 	}
-	public void setTel(double tel) {
-		this.tel = tel;
+	public void setTelTribunal(double telTribunal) {
+		this.telTribunal = telTribunal;
 	}
 	public String getRegion() {
 		return region;
